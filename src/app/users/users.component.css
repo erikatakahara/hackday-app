@@ -1,0 +1,31 @@
+.master-detail {
+	display: flex;
+	height: calc(100vh - 196px);
+}
+
+.listing, .user-detail {
+	overflow: auto;
+	height: 100%;
+}
+
+.listing {
+	flex: 1;
+}
+
+.user-detail {
+	flex: 2;
+	padding: 1em;
+	border: 1px solid var(--light-gray-color);
+}
+
+.user a {
+	display: flex;
+	align-items: center;
+	padding: 1em 0.5em;
+	cursor: pointer;
+}
+
+.avatar {
+	border-radius: 50%;
+	margin-right: 1em;
+}

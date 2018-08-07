@@ -1,0 +1,35 @@
+.main-header {
+	background-color: var(--primary-color);
+	color: white;
+	margin-bottom: 1.5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.main-header .container {
+	display: flex;
+	align-items: center;
+}
+
+.main-header a {
+	color: white;
+}
+
+.main-header .logo {
+	font-size: 1.5em;
+}
+
+.main-header .navigation {
+	flex: 1;
+	text-align: right;
+}
+
+.main-header .navigation a {
+	margin-left: 1em;
+	padding: 0.5em 1em;
+	display: inline-block;
+}
+
+.main-header .navigation a:hover {
+	background-color: red;
+}

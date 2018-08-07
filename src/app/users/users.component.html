@@ -1,0 +1,14 @@
+<h1>Usuários cadastrados</h1>
+
+<section class='master-detail'>
+	<ol class='listing'>
+		<li class='user' [class.selected]='user === selectedUser' *ngFor='let user of users'>
+			<a (click)='onSelect(user)'>
+				<img class='avatar' src='{{user.avatar}}'>
+				{{user.name}}
+			</a>
+		</li>
+	</ol>
+
+	<app-user-detail class='user-detail' *ngIf='selectedUser' [user]="selectedUser"></app-user-detail>
+</section>
