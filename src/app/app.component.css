@@ -33,3 +33,93 @@
 .main-header .navigation a:hover {
 	background-color: red;
 }
+
+/* Hackday css */
+
+.hackday {
+	padding: 0.5em;
+}
+
+.hackday a {
+	display: flex;
+	align-items: flex-start;
+}
+
+.hackday .description {
+	flex: 1;
+}
+
+.hackday p {
+	font-size: 0.9em;
+	margin-bottom: 0;
+}
+
+.hackday .avatar {
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 0.5em;
+	min-width: 30px;
+}
+
+.hackday-detail {
+	padding: 1em;
+	border: 1px solid var(--light-gray-color);
+}
+
+.status, .team {
+	color: white;
+	border-radius: 3px;
+	font-size: 0.8em;
+	display: inline-block;
+	padding: 0.3em 0.5em;
+	margin-top: 0.5em; 
+	margin-right: 0.5em; 
+}
+
+.team {
+	background-color: var(--primary-color);
+}
+
+.status.todo, .status.planned {
+	background-color: var(--dark-gray-color);
+}
+
+.status.inprogress {
+	background-color: var(--secondary-color);
+}
+
+.status.test {
+	background-color: var(--complimentary-color);
+}
+
+.status.fix {
+	background-color: var(--primary-color);
+}
+
+.status.done {
+	background-color: var(--terciary-color);
+}
+
+.status.deployed {
+	background-color: var(--secondary-complimentary-color);
+}
+
+.info {
+	font-size: 0.9em;
+}
+
+.info p {
+	margin-bottom: 0.5em;
+}
+
+.info em {
+	display: inline-block;
+	width: 200px;
+}
+
+
+.hackday-detail .avatar {
+	width: 25px;
+	border-radius: 50%;
+	vertical-align: bottom;
+}
