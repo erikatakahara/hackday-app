@@ -2,8 +2,11 @@
 
 <section class='master-detail'>
 	<ol class='listing'>
-		<li class='user' [class.selected]='user === selectedUser' *ngFor='let user of users'>
-			<a href='/user/{{user.id}}'>
+		<li class='user'>
+			<a routerLink='/user/new'>Novo usuário</a>
+		</li>
+		<li class='user' [class.selected]='selectedUser && (user.id === selectedUser.id)' *ngFor='let user of users'>
+			<a routerLink='/user/{{user.id}}'>
 				<img class='avatar' src='{{user.avatar}}'>
 				{{user.name}}
 			</a>
@@ -20,6 +23,18 @@
 			<span>Avatar</span>
 			<input [(ngModel)]='selectedUser.avatar'>
 		</label>
-		<!-- <button class='btn'>Salvar</button> -->
+		<button (click)='save()' class='btn'>Salvar</button>
+	</div>
+	<div class='user-detail' *ngIf='!selectedUser'>
+		<h2>Adicionar novo usuário</h2>
+		<label>
+			<span>Nome</span>
+			<input #userName>
+		</label>
+		<label>
+			<span>Avatar</span>
+			<input #avatar>
+		</label>
+		<button (click)='add(userName.value, avatar.value)' class='btn'>Adicionar</button>
 	</div>
 </section>
