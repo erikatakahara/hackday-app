@@ -15,23 +15,23 @@
 
 	<div class='user-detail' *ngIf='selectedUser'>
 		<h2>Detalhes de {{selectedUser.name}}</h2>
-		<label>
+		<label class='name'>
 			<span>Nome</span>
 			<input [(ngModel)]='selectedUser.name'>
 		</label>
-		<label>
+		<label class='avatar'>
 			<span>Avatar</span>
 			<input [(ngModel)]='selectedUser.avatar'>
 		</label>
 		<button (click)='save()' class='btn'>Salvar</button>
 	</div>
-	<div class='user-detail' *ngIf='!selectedUser'>
+	<div class='new-user user-detail' *ngIf='!selectedUser'>
 		<h2>Adicionar novo usuário</h2>
-		<label>
+		<label class='name'>
 			<span>Nome</span>
 			<input #userName>
 		</label>
-		<label>
+		<label class='avatar'>
 			<span>Avatar</span>
 			<input #avatar>
 		</label>
